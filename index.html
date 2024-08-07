@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้านนกลูกหมากบริการ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 30px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border-bottom: 5px solid #004080;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-family: 'Kanit', sans-serif;
+            line-height: 1.2;
+            font-weight: 700;
+        }
+        .header-subtitle {
+            font-size: 1.2em;
+            margin-top: 10px;
+            font-weight: 300;
+        }
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .images {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        .images img {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .content {
+            margin-bottom: 20px;
+            padding: 15px;
+        }
+        .content h2 {
+            color: #003366;
+            margin-bottom: 10px;
+        }
+        .content p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .service-list {
+            border: 2px solid #003366;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #f9f9f9;
+            position: relative;
+        }
+        .service-list::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #003366;
+            border-radius: 12px 0 0 12px;
+        }
+        .service-list h2 {
+            margin-top: 0;
+            text-align: center;
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            border-radius: 12px 12px 0 0;
+            margin-bottom: 20px;
+            font-family: 'Kanit', sans-serif;
+        }
+        .service-list ol {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .service-list ol li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            line-height: 1.6;
+        }
+        .service-list ol li::before {
+            content: "\f0da"; /* Unicode ของไอคอน Font Awesome */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #003366;
+        }
+        .service-list ol li span {
+            font-weight: bold;
+        }
+        .customer-images {
+            margin-bottom: 20px;
+        }
+        .customer-images h2 {
+            color: #003366;
+            font-size: 1.8em; /* ขนาดฟอนต์ลดลง */
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: 'Kanit', sans-serif;
+            position: relative;
+            padding: 10px 20px;
+            background: #f9f9f9;
+            border: 2px solid #003366;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .customer-images .images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .customer-images img {
+            width: 35%;/* ขนาดรูป 4 รูป */
+            height: auto;
+            border-radius: 8px;
+            border: 2px solid #003366;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .call-to-action {
+            background-color: #004080;
+            color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .call-to-action h2 {
+            margin-top: 0;
+        }
+        .contact {
+            background-color: #e6f2ff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contact h2 {
+            margin-top: 0;
+            color: #003366;
+        }
+        .contact-info {
+            margin-bottom: 15px;
+        }
+        .contact-info div {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .contact-info i {
+            margin-right: 10px;
+            color: #003366;
+        }
+        .contact-info a {
+            color: #003366;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>ร้านนกลูกหมากบริการ</h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="images">
+            <img src="nok1.1.png" alt="ช่วงล่างรถยนต์">
+        </div>
+        <div class="content">
+            <h2>ร้านนกลูกหมากบริการ!! ระบบช่วงล่างที่คุณวางใจได้</h2>
+            <p>
+                บริการตรวจเช็คและซ่อมบำรุงระบบช่วงล่างช่วยเพิ่มความปลอดภัย และยืดอายุการใช้งานของรถยนต์ 
+                บริการซ่อมเเละเปลี่ยน โช๊คอัพ, เพลาหน้า, ลูกหมาก, เเล็ค, โหลดเตี้ย-ยกสูง,
+                ตัดเเหนบ, ลูกปืนล้อ, เบรค, ครัช, อัดบูช, เพาเวอร์เเละเปลี่ยนถ่ายน้ำมันเครื่อง --ให้บริการช่วงล่างรถยนต์ทุกชนิด--
+            </p>
+            </p>
+                >>>> โทรหาเราวันนี้เพื่อรับคำปรึกษาฟรี! หรือ เข้ามาที่ร้าน เพื่อรับบริการที่ดีที่สุดสำหรับรถของคุณ เราพร้อมที่จะให้ความช่วยเหลือและรับประกันความพึงพอใจ <<<<
+            </p>
+        </div>
+        <div class="service-list">
+            <h2>ข้อมูลเกี่ยวกับการให้บริการ</h2>
+            <ol>
+                <li><span>ซ่อมและเปลี่ยนโช๊คอัพ:</span> เพื่อความนุ่มนวลและมั่นคงในการขับขี่</li>
+                <li><span>ซ่อมเพลาหน้า:</span> เพิ่มความเสถียรและลดการสั่นสะเทือน</li>
+                <li><span>ซ่อมเเละเปลี่ยนลูกหมาก หรือซ่อมเเละเปลี่ยนเพาเวอร์:</span> ช่วยในเรื่องการควบคุมพวงมาลัยให้มีความแม่นยำ</li>
+                <li><span>ซ่อมและเปลี่ยนแล็ค:</span> ป้องกันการหลวมและเพิ่มความมั่นใจในการขับขี่</li>
+                <li><span>โหลดเตี้ยและยกสูง:</span> ปรับระดับรถตามความต้องการ ตามสไตล์ของคุณ</li>
+                <li><span>ตัดแหนบ:</span> เสริมความแข็งแกร่งและการทรงตัวของรถยนต์</li>
+                <li><span>เปลี่ยนลูกปืนล้อ:</span> ลดเสียงรบกวน และเพิ่มความราบรื่นในการขับขี่</li>
+                <li><span>เจียรจานเบรค:</span> มั่นใจในความปลอดภัยทุกครั้งที่หยุดรถ</li>
+                <li><span>ซ่อมครัทช์:</span> ให้การเปลี่ยนเกียร์ราบรื่นและมีประสิทธิภาพ</li>
+                <li><span>อัดบูช:</span> เพิ่มความยืดหยุ่นและลดการสั่นสะเทือน</li>
+                <li><span>บริการซ่อมช่วงล่างทุกชนิด:</span> รวมไปถึงการเปลี่ยนถ่ายน้ำมันเครื่อง เพื่อให้การขับขี่นุ่มนวลและปลอดภัย</li>
+            </ol>
+        </div>
+        <div class="customer-images">
+            <h2>รูปภาพรถลูกค้า ที่นำมาใช้บริการซ่อมที่ร้าน</h2>
+            <div class="images">
+                <img src="nok21.jpg" alt="รถลูกค้าคันที่ 1">
+                <img src="nok22.jpg" alt="รถลูกค้าคันที่ 2">
+            </div>
+            <div class="images">
+                <img src="nok23.jpg" alt="รถลูกค้าคันที่ 3">
+                <img src="nok24.jpg" alt="รถลูกค้าคันที่ 4">
+            </div>
+        </div>
+        <div class="call-to-action">
+            <h2>มาใช้บริการกับเรา!</h2>
+            <p>
+                ร้านนกลูกหมากยินดีให้บริการทุกท่านด้วยความใส่ใจและความเชี่ยวชาญในระบบช่วงล่างของรถยนต์
+                ด้วยทีมงานมืออาชีพและประสบการณ์ที่ยาวนานถึง 35 ปี เราพร้อมให้คำปรึกษาและบริการที่ดีที่สุด 
+                เพื่อให้รถยนต์ของคุณกลับมาสมบูรณ์แบบเหมือนใหม่อีกครั้ง
+            </p>
+        </div>
+        <div class="contact">
+            <h2>ติดต่อเรา</h2>
+            <div class="contact-info">
+                <div><i class="fas fa-phone-alt"></i> <a href="tel:+66932805320">+66 9328 05320</a></div>
+                <div><i class="fab fa-line"></i> <a href="https://line.me/ti/p/VX-axBHPHN" target="_blank">0932805320</a></div>
+                <div><i class="fab fa-facebook"></i> <a href="https://www.facebook.com/profile.php?id=100054290180965" target="_blank">นกลูกหมาก โช็คอัพ โหลดเตี้ย ยกสูง</a></div>
+                <div><i class="fas fa-map-marker-alt"></i> <a href="https://maps.app.goo.gl/KgcLmKb8najkRhHC9" target="_blank">42 ถนนพรมเเดน, แขวงบางบอนใต้, เขตบางบอน, กรุงเทพฯ 10150</a></div>
+                <div><i class="fas fa-clock"></i> <span>ร้านเปิดให้บริการทุกวันตั้งเเต่: 07:00 - 18:00 น.</span></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; ร้านนกลูกหมากบริการ - สาขาบางบอน 5</p>
+    </footer>
+</body>
+</html>
